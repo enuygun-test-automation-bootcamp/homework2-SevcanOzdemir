@@ -1,0 +1,33 @@
+JUnit Nedir?
+
+JUnit, Java dilinde uygulamalarımızı test etmek için kullanabileceğimiz bir test framework'üdür.
+
+JUnit Notasyonları Nelerdir ?
+@BeforeClass
+@AfterClass
+@Before
+@After
+@Test
+@Ignore olmak üzere altıya ayırabiliriz.
+@BeforeClass
+
+Bütün testler başlamadan önce çalışacak metottur. Örneğin, veritabanı bağlantısı bu sınıfta gerçekleştirilir.
+
+@AfterClass
+Bütün testler bittikten sonra çalışacak metottur. Yukarıda bahsetmiş olduğumuz veritabanı bağlantı işlemi @BeforeClass notasyonu ile başlatılırken veritabanı bağlantısını sonlandırma işlemi ise burada gerçekleştirilmektedir.
+
+
+@Before
+Before notasyonu da test adımlarından önce başlamaktadır. Veri okuması ve testin öncesinde yapılması gereken işlemler test adımlarını hızlandırmak için yani zamandan tasarruf etmek için bu metot da tanımlanır. Model ve nesnelerine atama işlemlerinin burada gerçekleştiririz. Bir önceki dersimizde Before notasyonun içerisinde WebDriver tanımlarını ve model atamalarını burada gerçekleştirdik. Örnek olarak aşağıdaki tanımlamaya bakabilirsiniz.
+
+
+After
+After notasyonu ise test metodlarından sonra çalışmaktadır. After notasyonun da en çok yapılan işlem, test metodlarından sonra her seferinde atanan değerlere null değerler gönderilmektedir.
+
+@Before ve @After notasyonları her test metodundan sonra çalışabilirken @BeforeClass ve @AfterClass bir kere çalışmaktadır.
+
+@Test
+Test notasyonu içerisinde test case’mizde yer alacak adımları tanımlarız. Bir önceki dersimizde test notasyonunun içerisinde yapmış olduğumuz örnek aşağıda yer almaktadır. Buradan bu notasyonu ne için kullanılacağını anlayabiliriz.
+
+Ignore
+Yazdığımız test metotlarının çalıştırılmasını istemiyorsak bu amaç ile kullanabileceğimiz bir notasyondur. @Ignore notasyonunu ilgili test metodundan önce tanımlamamız yeterli olacaktır.
